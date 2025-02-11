@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    private bool Turn = false;
     public float jumpForce = 10;
     public float moveSpeed = 10;
     Rigidbody2D rb;
@@ -17,32 +18,36 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            
+            Turn = true;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
         }
     }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        Turn = false;
+    }
     private void Update()
     {
-        //movement.x = Input.GetAxis("Horizontal");
-
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Turn == true)
         {
+            if (Input.GetKey(KeyCode.A))
+            {
 
-            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+                rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+            }
+
+            if (Input.GetKey(KeyCode.D))
+            {
+
+                rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-
-            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
-        }
+       
 
     }
     
-    private void FixedUpdate()
-    {
-       // rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-    }
+    
 
 }
