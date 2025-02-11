@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public float jumpForce = 10;
+    public float moveSpeed = 10;
     Rigidbody2D rb;
-
+    Vector2 movement;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -21,4 +22,15 @@ public class PlayerMove : MonoBehaviour
 
         }
     }
+    private void Update()
+    {
+        movement.x = Input.GetAxis("Horizontal");
+
+    }
+    
+    private void FixedUpdate()
+    {
+       // rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
 }
