@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    public float jumpForce = 10;
+    Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
             Debug.Log("I sould be talking");
 
+            rb.AddForce(Vector2.up * jumpForce);
         }
     }
 }
