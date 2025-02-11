@@ -16,9 +16,9 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
-            Debug.Log("I sould be talking");
+            
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
-            rb.AddForce(Vector2.up * jumpForce);
         }
     }
 }
