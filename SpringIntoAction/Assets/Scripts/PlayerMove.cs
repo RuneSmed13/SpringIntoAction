@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter(Collision collision)
     {
-        
-    }
+        if (collision.gameObject.tag == "Ground")
+        {
+            Debug.Log("I sould be talking");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
     }
 }
