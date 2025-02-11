@@ -24,7 +24,19 @@ public class PlayerMove : MonoBehaviour
     }
     private void Update()
     {
-        movement.x = Input.GetAxis("Horizontal");
+        //movement.x = Input.GetAxis("Horizontal");
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+
+            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+
+            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+        }
 
     }
     
