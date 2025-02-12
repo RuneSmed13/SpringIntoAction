@@ -971,7 +971,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0044856668, y: -0.7508699}
+  m_Offset: {x: 0.0023002625, y: -0.7508699}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -982,7 +982,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.904541, y: 0.87901175}
+  m_Size: {x: 0.9930115, y: 0.87901175}
   m_EdgeRadius: 0
 --- !u!212 &708718772
 SpriteRenderer:
@@ -1426,8 +1426,24 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6803490637938834677, guid: 2e28679a7cc61064a985f175e326ba66, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803490637938834677, guid: 2e28679a7cc61064a985f175e326ba66, type: 3}
       propertyPath: field of view
       value: 87
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803490637938834677, guid: 2e28679a7cc61064a985f175e326ba66, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803490637938834677, guid: 2e28679a7cc61064a985f175e326ba66, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.80283016
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803490637938834677, guid: 2e28679a7cc61064a985f175e326ba66, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.6773585
       objectReference: {fileID: 0}
     - target: {fileID: 7711396681779537098, guid: 2e28679a7cc61064a985f175e326ba66, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1729,7 +1745,7 @@ Transform:
   m_GameObject: {fileID: 1652753082}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.129242, y: 1.4638872, z: -0.2260618}
+  m_LocalPosition: {x: -18.129242, y: -3, z: -0.2260618}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
